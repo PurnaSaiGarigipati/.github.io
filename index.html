@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Space Technology</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d2b;
+            color: #e0e0e0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #14142b;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #1f80e0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?space') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Section Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #1f1f3b;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+        .card h3 {
+            color: #1f80e0;
+        }
+        .card p {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #14142b;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        footer a {
+            color: #1f80e0;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my  Pages site!</h1>
-    <p>This is my personal website hosted using GitHub Pages.</p>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Space Technology</a></li>
+            <li><a href="#advancements">Advancements</a></li>
+            <li><a href="#future">Future</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Space Technology: The Final Frontier</h1>
+            <p>Exploring the wonders of the universe through technological advancement.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="content">
+        <h2>About Space Technology</h2>
+        <p>Space technology encompasses the tools, devices, and engineering methods that allow humans to explore outer space. These include spacecraft, satellites, space stations, and the advanced systems that power them. Space technology plays a crucial role in modern science, enabling breakthroughs in communication, environmental monitoring, and planetary exploration.</p>
+    </section>
+
+    <!-- Advancements Section -->
+    <section id="advancements" class="content">
+        <h2>Recent Advancements</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>SpaceX Reusable Rockets</h3>
+                <p>SpaceX revolutionized space travel with its Falcon 9 reusable rockets, dramatically lowering the cost of space missions and increasing launch frequency.</p>
+            </div>
+            <div class="card">
+                <h3>James Webb Space Telescope</h3>
+                <p>The James Webb Space Telescope offers unprecedented resolution, enabling astronomers to peer into the farthest reaches of the universe, studying distant stars, planets, and galaxies.</p>
+            </div>
+            <div class="card">
+                <h3>Mars Rovers</h3>
+                <p>NASA's Mars rovers, like Perseverance, are paving the way for future human exploration on Mars by studying the planet's surface and searching for signs of ancient life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="content">
+        <h2>The Future of Space Technology</h2>
+        <p>The future of space technology is boundless, with private companies and national agencies alike working towards interplanetary travel, asteroid mining, and colonization of other planets. Innovations in propulsion, energy, and spacecraft materials will make deep space missions more achievable than ever before. The possibilities are endless, from permanent colonies on Mars to space tourism becoming a regular activity.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Space Explorers | <a href="#about">Learn More About Space Technology</a></p>
+    </footer>
+
 </body>
 </html>
