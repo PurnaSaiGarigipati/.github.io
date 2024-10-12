@@ -3,144 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Technology - The Future of Exploration</title>
+    <title>Telecom Technologies & Advancements</title>
     <style>
-        /* Global styles */
+        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0b0d17;
-            color: #e0e0e0;
+            background-color: #f5f5f5;
+            color: #333;
         }
-
-        /* Navigation Bar */
         nav {
-            background-color: #1b1d36;
+            background-color: #202124;
             padding: 1rem;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         nav ul {
-            list-style-type: none;
+            list-style: none;
             margin: 0;
             padding: 0;
         }
         nav ul li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
         }
         nav ul li a {
-            color: #ffffff;
-            text-transform: uppercase;
+            color: #fff;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-weight: bold;
-            letter-spacing: 2px;
-            transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #00bcd4;
+            color: #ff3c00;
         }
 
-        /* Hero Section */
-        .hero {
-            background: url('https://source.unsplash.com/1600x900/?nasa,space') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
+        /* Hero Section with Slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 80vh;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+        }
+        .slideshow-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
             text-align: center;
         }
-        .hero h1 {
-            font-size: 5rem;
+
+        .text-overlay h1 {
+            font-size: 3rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-        .hero p {
-            font-size: 1.8rem;
-            margin: 20px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-        .hero button {
-            background-color: #00bcd4;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .hero button:hover {
-            background-color: #008c9e;
         }
 
-        /* Section Styling */
+        /* Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Content Section */
         .content {
             padding: 60px 20px;
             text-align: center;
         }
         .content h2 {
-            font-size: 2.8rem;
-            color: #00bcd4;
-            margin-bottom: 40px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
         }
         .content p {
             font-size: 1.2rem;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            color: #b0b0b0;
-            line-height: 1.6;
         }
 
-        /* Cards */
-        .card-container {
+        /* Blog Section */
+        .blog-container {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
-            margin-top: 40px;
+            justify-content: center;
+            margin: 40px 0;
         }
-        .card {
-            background-color: #1b1d36;
+        .blog-post {
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 20px;
-            width: 300px;
             margin: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
         }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        .blog-post:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        .card img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .blog-post h3 {
+            color: #ff3c00;
         }
-        .card h3 {
-            color: #00bcd4;
-            margin-bottom: 10px;
-        }
-        .card p {
+        .blog-post p {
             font-size: 1rem;
-            color: #b0b0b0;
-            line-height: 1.6;
+            color: #666;
         }
 
         /* Footer */
         footer {
-            background-color: #1b1d36;
+            background-color: #202124;
             padding: 40px;
-            color: #ffffff;
             text-align: center;
+            color: #fff;
         }
         footer a {
-            color: #00bcd4;
+            color: #ff3c00;
             text-decoration: none;
         }
     </style>
@@ -150,60 +148,93 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about">About Space Tech</a></li>
             <li><a href="#advancements">Advancements</a></li>
-            <li><a href="#future">Future Tech</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#satellite-tech">Satellite Technologies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div>
-            <h1>Exploring the Future of Space Technology</h1>
-            <p>Pushing the boundaries of human exploration into the cosmos.</p>
-            <button>Learn More</button>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <img src="https://source.unsplash.com/1600x900/?5G,telecom" alt="5G Technologies">
+            <div class="text-overlay">
+                <h1>Advancing 5G and Network Capabilities</h1>
+            </div>
         </div>
+
+        <div class="mySlides">
+            <img src="https://source.unsplash.com/1600x900/?satellite,space" alt="Satellite Technologies">
+            <div class="text-overlay">
+                <h1>Satellite Communication Technologies</h1>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="https://source.unsplash.com/1600x900/?AI,telecom" alt="AI in Telecommunications">
+            <div class="text-overlay">
+                <h1>Artificial Intelligence in Telecom</h1>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
     </div>
 
-    <!-- About Space Technology Section -->
-    <section id="about" class="content">
-        <h2>About Space Technology</h2>
-        <p>Space technology includes the cutting-edge tools and methods that allow us to explore and better understand the universe. This technology enables us to build spacecraft, space stations, and planetary rovers, all aimed at pushing the frontier of knowledge and discovery.</p>
+    <!-- Advancements Section -->
+    <section id="advancements" class="content">
+        <h2>Telecom Advancements</h2>
+        <p>Explore the latest advancements in telecom, from 5G innovations to AI-driven automation, and how these technologies are shaping the future of communication.</p>
     </section>
 
-    <!-- Advancements in Space Tech -->
-    <section id="advancements" class="content">
-        <h2>Recent Advancements in Space Technology</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://source.unsplash.com/300x200/?spaceX,rocket" alt="SpaceX Rocket">
-                <h3>Reusable Rockets</h3>
-                <p>SpaceX revolutionized space travel with reusable rockets, significantly lowering costs and increasing launch efficiency.</p>
+    <!-- Blog Section -->
+    <section id="blog" class="content">
+        <h2>Blog: Insights into Telecom</h2>
+        <div class="blog-container">
+            <div class="blog-post">
+                <h3>Why 5G is the Future of Connectivity</h3>
+                <p>5G promises to revolutionize how we connect, with ultra-low latency and unprecedented speeds.</p>
             </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/300x200/?telescope,space" alt="Telescope">
-                <h3>James Webb Space Telescope</h3>
-                <p>The JWST is the most powerful space telescope ever built, capable of observing the most distant objects in the universe.</p>
+            <div class="blog-post">
+                <h3>The Role of AI in Telecom Automation</h3>
+                <p>From predictive maintenance to customer service, AI is playing a transformative role in telecom.</p>
             </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/300x200/?mars,rover" alt="Mars Rover">
-                <h3>Perseverance Rover</h3>
-                <p>The Mars Perseverance rover continues to explore the Red Planet, searching for signs of ancient life.</p>
+            <div class="blog-post">
+                <h3>Satellite Technologies Enabling Global Coverage</h3>
+                <p>Satellites are bridging the connectivity gap in remote areas, offering global broadband coverage.</p>
             </div>
         </div>
     </section>
 
-    <!-- Future Space Tech Section -->
-    <section id="future" class="content">
-        <h2>The Future of Space Technology</h2>
-        <p>The future of space exploration lies in innovations like deep-space habitats, space tourism, and interstellar travel. With new propulsion systems and technologies, humanity is poised to venture further into the cosmos than ever before.</p>
-    </section>
-
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 SpaceTech Inc. | <a href="#about">About Us</a> | <a href="#contact">Contact</a></p>
+        <p>&copy; 2024 Telecom Technologies | <a href="#contact">Contact Us</a></p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+    </script>
 
 </body>
 </html>
