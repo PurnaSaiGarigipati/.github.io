@@ -3,103 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telecom Technologies & Advancements</title>
+    <title>Telecom Advancements and Technologies</title>
     <style>
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #0d0d2b;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
         }
+        
+        /* Navigation Bar */
         nav {
-            background-color: #202124;
-            padding: 1rem;
+            background-color: #14142b;
+            padding: 1.5rem 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
-            list-style: none;
+            list-style-type: none;
             margin: 0;
             padding: 0;
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #ff3c00;
-        }
-
-        /* Hero Section with Slideshow */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            height: 80vh;
-            overflow: hidden;
-        }
-        .mySlides {
-            display: none;
-        }
-        .slideshow-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .text-overlay {
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            text-align: center;
-        }
-
-        .text-overlay h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        /* Navigation Buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+            color: #00bcd4;
         }
 
         /* Content Section */
         .content {
             padding: 60px 20px;
             text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .content h1 {
+            color: #00bcd4;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
         }
         .content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2.2rem;
+            color: #e0e0e0;
+            margin-bottom: 20px;
         }
         .content p {
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            line-height: 1.7;
+            color: #b0b0b0;
+        }
+        .content p strong {
+            color: #fff;
         }
 
         /* Blog Section */
@@ -107,38 +74,34 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 40px 0;
+            gap: 40px;
         }
         .blog-post {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            margin: 20px;
-            width: 300px;
+            background-color: #14142b;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: box-shadow 0.3s;
-        }
-        .blog-post:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: left;
         }
         .blog-post h3 {
-            color: #ff3c00;
+            color: #00bcd4;
+            margin-bottom: 10px;
         }
         .blog-post p {
             font-size: 1rem;
-            color: #666;
+            color: #b0b0b0;
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
-            background-color: #202124;
-            padding: 40px;
+            background-color: #14142b;
+            padding: 20px;
             text-align: center;
-            color: #fff;
+            color: #ffffff;
         }
         footer a {
-            color: #ff3c00;
+            color: #00bcd4;
             text-decoration: none;
         }
     </style>
@@ -155,86 +118,43 @@
         </ul>
     </nav>
 
-    <!-- Slideshow -->
-    <div class="slideshow-container">
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Telecom Advancements and Technologies</h1>
 
-        <div class="mySlides">
-            <img src="https://source.unsplash.com/1600x900/?5G,telecom" alt="5G Technologies">
-            <div class="text-overlay">
-                <h1>Advancing 5G and Network Capabilities</h1>
-            </div>
-        </div>
+        <h2 id="advancements">Telecom Advancements</h2>
+        <p>Telecommunication is evolving rapidly. <strong>5G networks</strong> are transforming the way we communicate, offering ultra-fast speeds, low latency, and the ability to connect billions of devices simultaneously. <br><br>
+        Beyond 5G, the future lies in <strong>6G networks</strong>, which aim to connect not just people but also everything around us, including machines, smart cities, and immersive virtual worlds. The vision for 6G involves not only faster speeds but also greater intelligence embedded into the network through AI-driven processes.<br><br>
+        Innovations in telecommunication also focus on automation, where <strong>Artificial Intelligence (AI)</strong> is enhancing network optimization and predictive maintenance, minimizing downtime and maximizing efficiency.</p>
 
-        <div class="mySlides">
-            <img src="https://source.unsplash.com/1600x900/?satellite,space" alt="Satellite Technologies">
-            <div class="text-overlay">
-                <h1>Satellite Communication Technologies</h1>
-            </div>
-        </div>
-
-        <div class="mySlides">
-            <img src="https://source.unsplash.com/1600x900/?AI,telecom" alt="AI in Telecommunications">
-            <div class="text-overlay">
-                <h1>Artificial Intelligence in Telecom</h1>
-            </div>
-        </div>
-
-        <!-- Navigation buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+        <h2 id="satellite-tech">Satellite Communication Technologies</h2>
+        <p>Satellite technology plays a crucial role in bridging the digital divide by connecting remote regions that traditional terrestrial networks cannot reach. Modern satellite constellations, like <strong>Low Earth Orbit (LEO)</strong> systems, are enabling global internet coverage with high-speed, low-latency communication. This technology is vital for sectors such as maritime, aviation, and defense.<br><br>
+        As space technology advances, satellites are becoming smarter, more energy-efficient, and capable of providing real-time data for various applications, including environmental monitoring, disaster management, and precision agriculture.</p>
     </div>
-
-    <!-- Advancements Section -->
-    <section id="advancements" class="content">
-        <h2>Telecom Advancements</h2>
-        <p>Explore the latest advancements in telecom, from 5G innovations to AI-driven automation, and how these technologies are shaping the future of communication.</p>
-    </section>
 
     <!-- Blog Section -->
     <section id="blog" class="content">
         <h2>Blog: Insights into Telecom</h2>
         <div class="blog-container">
             <div class="blog-post">
-                <h3>Why 5G is the Future of Connectivity</h3>
-                <p>5G promises to revolutionize how we connect, with ultra-low latency and unprecedented speeds.</p>
+                <h3>5G: Revolutionizing Connectivity</h3>
+                <p>5G is not just an evolution but a revolution in wireless technology, offering unmatched speeds and connectivity options. From autonomous vehicles to smart cities, 5G will serve as the backbone for future innovations.</p>
             </div>
             <div class="blog-post">
-                <h3>The Role of AI in Telecom Automation</h3>
-                <p>From predictive maintenance to customer service, AI is playing a transformative role in telecom.</p>
+                <h3>AI's Role in Network Automation</h3>
+                <p>Artificial intelligence is becoming integral to managing networks. Predictive maintenance, automated optimizations, and enhanced security measures are just a few examples of how AI is transforming telecom.</p>
             </div>
             <div class="blog-post">
-                <h3>Satellite Technologies Enabling Global Coverage</h3>
-                <p>Satellites are bridging the connectivity gap in remote areas, offering global broadband coverage.</p>
+                <h3>Satellite Networks: The New Frontier</h3>
+                <p>As the world becomes increasingly connected, satellite networks offer the potential to reach every corner of the globe, from dense urban environments to isolated rural areas. LEO constellations are set to drive this connectivity revolution.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Telecom Technologies | <a href="#contact">Contact Us</a></p>
+        <p>&copy; 2024 Telecom Technologies. <a href="#contact">Contact Us</a></p>
     </footer>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
-
-        function plusSlides(n) {
-            slideIndex += n - 1;
-            showSlides();
-        }
-    </script>
 
 </body>
 </html>
